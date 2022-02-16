@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0 10em;
+  background: yellow;
+}
+#root {
+  border: 5px black solid;
+}
