@@ -7,6 +7,8 @@ import Register from "./components/Register";
 import Header from "./components/Header";
 import Main from "./components/Main";
 
+import Login from "./components/Login";
+
 function App() {
   return (
     <Routes>
@@ -27,6 +29,8 @@ function App() {
           </>
         }
       />
+      <Route path="/login" element={<Login />} />
+      <Route path="/judge" />
     </Routes>
   );
 }
