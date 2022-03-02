@@ -5,6 +5,7 @@ import Info from "./Header/Info";
 import Logo from "./Header/Logo";
 
 function Header() {
+  console.log("1111");
   return (
     <div className="Header">
       <Info />

@@ -1,4 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
 .Info {
-  background: green;
-  width: 20%;
+  font-family: "Jua", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  background: #fff89a;
+  width: 15%;
+
+  border: 5px solid black;
+  border-right: 0;
+
+  font-size: 1.7rem;
+
+  text-align: center;
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .date {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
 }

@@ -2,10 +2,9 @@ import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import "../scss/Register.scss";
 
-import axios from "axios";
-
 function Register() {
   const [Info, setInfo] = useState({
+    Student_Id: "",
     name: "",
     email: "",
     phone: "",
@@ -22,18 +21,24 @@ function Register() {
     [Info]
   );
 
-  const onSubmit = () => {
-    setInfo({
-      name: "",
-      email: "",
-      phone: "",
-    });
-  };
-
   return (
     <div className="container">
       <div className="Register">
         <form action="http://localhost:3000/register" method="get">
+          <div className="form-group">
+            <span>학번</span>
+            <input
+              className="form-field"
+              type="text"
+              placeholder="1234567"
+              name="Student_Id"
+              value={Info.Student_Id}
+              autoFocus
+              required
+              onChange={onChange}
+            />
+          </div>
+
           <div className="form-group">
             <span>Name</span>
             <input
@@ -77,9 +82,7 @@ function Register() {
 
           <div className="button">
             <span>
-              <Link to="../main">
-                <a href="#" onClick={onSubmit}></a>
-              </Link>
+              <Link to="../main" />
             </span>
           </div>
         </form>

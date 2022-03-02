@@ -2,7 +2,7 @@ import react from "react";
 import "../../scss/Header/Logo.scss";
 
 function Logo() {
-  return <div className="Logo"></div>;
+  return <div className="Logo">Online Judge</div>;
 }
 
 export default Logo;

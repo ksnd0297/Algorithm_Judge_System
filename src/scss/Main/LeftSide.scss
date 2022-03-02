@@ -1,5 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
 .LeftSide {
-  width: 20%;
+  font-family: "Jua", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  width: 15%;
   height: 100%;
-  background: blue;
+
+  background: #85f4ff;
+  border: {
+    left: 5px solid black;
+    bottom: 5px solid black;
+  }
+
+  .Link {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 1.5em;
+    width: 100%;
+    padding-left: 5px;
+    height: 40px;
+  }
+
+  .Arrow {
+    position: absolute;
+    right: -5px;
+    width: 0;
+    height: 0;
+
+    border-color: transparent #42ceff transparent currentcolor;
+    border-style: solid solid solid none;
+    border-width: 20px;
+  }
 }

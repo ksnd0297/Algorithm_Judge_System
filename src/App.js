@@ -1,22 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 
+import Login from "./components/Login";
 import Register from "./components/Register";
 
 import Header from "./components/Header";
 import Main from "./components/Main";
 
-import Login from "./components/Login";
+import Algorithm from "./components/Content/Algorithm";
+import Judge from "./components/Content/Judge";
+import Problems from "./components/Content/Problems";
+import Score from "./components/Content/Score";
+import Home from "./components/Content/Home";
 
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route
-        path="/register"
+        path="/problems"
         element={
           <>
-            <Register />
+            <Header />
+            <Main>
+              <Problems />
+            </Main>
+          </>
+        }
+      />
+      <Route
+        path="/judge"
+        element={
+          <>
+            <Header />
+            <Main>
+              <Judge />
+            </Main>
+          </>
+        }
+      />
+      <Route
+        path="/algorithm"
+        element={
+          <>
+            <Header />
+            <Main>
+              <Algorithm />
+            </Main>
+          </>
+        }
+      />
+      <Route
+        path="/score"
+        element={
+          <>
+            <Header />
+            <Main>
+              <Score />
+            </Main>
           </>
         }
       />
@@ -25,12 +68,12 @@ function App() {
         element={
           <>
             <Header />
-            <Main />
+            <Main>
+              <Home />
+            </Main>
           </>
         }
       />
-      <Route path="/login" element={<Login />} />
-      <Route path="/judge" />
     </Routes>
   );
 }

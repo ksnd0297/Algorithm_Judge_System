@@ -1,6 +1,8 @@
 .Content {
   display: inline-block;
-  background: orange;
+  background: #42ceff;
   flex: 1;
   height: 100%;
+  border: 5px solid black;
+  border-top: 0;
 }
