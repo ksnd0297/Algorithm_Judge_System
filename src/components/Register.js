@@ -47,7 +47,6 @@ function Register() {
               placeholder="홍길동"
               name="name"
               value={Info.name}
-              autoFocus
               required
               onChange={onChange}
             />

@@ -5,4 +5,4 @@ function Logo() {
   return <div className="Logo">Online Judge</div>;
 }
 
-export default Logo;
+export default react.memo(Logo);

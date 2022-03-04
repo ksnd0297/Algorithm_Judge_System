@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.scss";
 
 import Login from "./components/Login";
@@ -15,9 +15,11 @@ import Score from "./components/Content/Score";
 import Home from "./components/Content/Home";
 
 function App() {
+  const [appToken, appSetToken] = useState(null);
+
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={<Login appSetToken={appSetToken} />} />
       <Route path="/register" element={<Register />} />
       <Route
         path="/problems"
