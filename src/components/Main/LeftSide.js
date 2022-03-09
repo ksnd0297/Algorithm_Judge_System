@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../../scss/Main/LeftSide.scss";
 
 import cn from "classnames";
@@ -19,7 +19,7 @@ const link = [
   },
   {
     name: "개인 점수",
-    to: "/problems",
+    to: "/score",
   },
   {
     name: "홈",
@@ -28,8 +28,7 @@ const link = [
 ];
 
 function LeftSide() {
-  const [page, setPage] = useState(4);
-  console.log(setPage);
+  const [page, setPage] = useState(useLocation().pathname || "/main");
 
   return (
     <div className="LeftSide">
@@ -37,11 +36,11 @@ function LeftSide() {
         <Link
           key={index}
           to={L.to}
-          className={cn("Link", { active: page === index })}
-          onClick={() => setPage(index)}
+          className={cn("Link", { active: page === L.to })}
+          onClick={() => setPage(L.to)}
         >
           <span>{L.name}</span>
-          {page === index && <span className="Arrow" />}
+          {page === L.to && <span className="Arrow" />}
         </Link>
       ))}
     </div>

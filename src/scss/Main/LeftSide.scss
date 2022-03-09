@@ -53,3 +53,9 @@
     border-width: 20px;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .LeftSide {
+    font-size: 10px !important;
+  }
+}

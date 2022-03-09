@@ -15,8 +15,12 @@ const token = async () => {
 const Login = ({ appSetToken }) => {
   const navigate = useNavigate();
   return (
-    <div className="container">
+    <div className="LoginContainer">
       <div className="Login">
+        <div className="Logo">
+          DONG-A
+          <br /> ONLINE JUDGE
+        </div>
         <KakaoLogin
           token="4ae0a1ae52b7f23c485169b6a0c37528"
           onSuccess={(response) => {
@@ -25,7 +29,7 @@ const Login = ({ appSetToken }) => {
           }}
           onFail={console.error}
           onLogout={console.info}
-          className="aaa"
+          className="KakaoLogin"
           style={{ all: "none" }}
         />
       </div>

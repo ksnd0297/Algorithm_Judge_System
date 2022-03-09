@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
-.container {
+.LoginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
   height: 100%;
 
@@ -10,35 +14,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
     background: skyblue;
-  }
 
-  .aaa {
-    font-family: "Jua", sans-serif;
-    font-size: large;
-    font-weight: bold;
+    .Logo {
+      height: 15%;
+      width: 30%;
+      background-color: green;
+      margin-bottom: 1em;
 
-    min-width: 200px;
-    background-color: yellow;
-    border: 4px solid black;
-    border-radius: 0.5em;
-    width: 30%;
-    height: 10%;
-    transition-duration: 0.15s;
-    &:hover {
-      background-color: rgb(248, 235, 46);
-      transition-duration: 0.15s;
-      transform: scale(0.95);
-      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      font-size: xx-large;
     }
-  }
-}
 
-@media screen and (max-width: 500px) {
-  .container {
-    .Login {
-      width: 100%;
-      height: 50%;
+    .KakaoLogin {
+      font-family: "Jua", sans-serif;
+      font-size: large;
+      font-weight: bold;
+
+      min-width: 200px;
+      background-color: yellow;
+      border: 4px solid black;
+      border-radius: 0.5em;
+      width: 30%;
+      height: 10%;
+      transition-duration: 0.15s;
+      &:hover {
+        background-color: rgb(248, 235, 46);
+        transition-duration: 0.15s;
+        transform: scale(0.95);
+        cursor: pointer;
+      }
     }
   }
 }

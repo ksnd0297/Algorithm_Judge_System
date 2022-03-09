@@ -22,7 +22,7 @@ function Register() {
   );
 
   return (
-    <div className="container">
+    <div className="RegisterContainer">
       <div className="Register">
         <form action="http://localhost:3000/register" method="get">
           <div className="form-group">

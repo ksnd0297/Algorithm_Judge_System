@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+.ProblemsContainer {
+  font-family: "Jua", sans-serif;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .responsive-table {
+    li {
+      border-radius: 3px;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .table-header {
+      background-color: #afb5b6;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      text-align: center;
+
+      line-height: 20px;
+    }
+    .table-row {
+      background-color: #ffffff;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+    .col {
+      &-1 {
+        flex-basis: 8%;
+      }
+      &-2 {
+        flex-basis: 20%;
+      }
+      &-3 {
+        flex-basis: 25%;
+      }
+      &-4 {
+        flex-basis: 8%;
+      }
+      &-5 {
+        flex-basis: 25%;
+      }
+      &-6 {
+        flex-basis: 25%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .table-header {
+    display: none;
+  }
+  li {
+    display: block;
+  }
+  .col {
+    flex-basis: 100%;
+  }
+  .col {
+    display: flex;
+    padding: 10px 0;
+    &:before {
+      color: #6c7a89;
+      padding-right: 10px;
+      flex-basis: 50%;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .table-header {
+    font-size: 12px !important;
+  }
+  .table-row {
+    font-size: 12px !important;
+  }
+}

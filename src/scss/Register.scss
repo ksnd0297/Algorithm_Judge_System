@@ -18,7 +18,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .container {
+  .RegisterContainer {
     width: 100%;
     height: 100%;
     .Register {
@@ -30,7 +30,7 @@
   }
 }
 
-.container {
+.RegisterContainer {
   display: flex;
   justify-content: center;
   align-items: center;
