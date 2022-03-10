@@ -1,4 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
 .JudgeContainer {
+  width: 50%;
+  height: 50%;
+  background-color: azure;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   .Judge {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .header {
+      .problem {
+        width: 15em;
+        height: 3em;
+
+        text-align: center;
+        font-family: "Jua", sans-serif;
+        font-size: 1em;
+      }
+
+      .file {
+        display: flexbox;
+        width: 50%;
+        font-family: "Jua", sans-serif;
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .file {
+        width: 15em;
+
+        font-family: "Jua", sans-serif;
+        font-size: 1em;
+      }
+    }
+    .button {
+      border: 3px solid black;
+      width: 5em;
+      height: 2.5em;
+      border-radius: 8%;
+
+      align-items: center;
+
+      font-family: "Jua", sans-serif;
+      font-size: 1em;
+      font-weight: bold;
+
+      text-align: center;
+
+      letter-spacing: 0.2em;
+
+      &:hover {
+        border: 3px solid #426eff;
+        color: white;
+        background-color: #426eff;
+        transition: 0.3s;
+      }
+    }
   }
 }

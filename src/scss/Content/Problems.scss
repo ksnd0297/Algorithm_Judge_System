@@ -2,10 +2,8 @@
 
 .ProblemsContainer {
   font-family: "Jua", sans-serif;
-  margin-top: 30px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%;
+  width: 100%;
 
   .responsive-table {
     li {
@@ -13,6 +11,7 @@
       padding: 25px 30px;
       display: flex;
       justify-content: space-between;
+      width: 100%;
       margin-bottom: 15px;
     }
     .table-header {

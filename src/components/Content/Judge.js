@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from "react";
 
+import "../../scss/Content/Judge.scss";
+
 function Judge() {
   const [file, setFile] = useState();
 
@@ -27,20 +29,28 @@ function Judge() {
     { id: 2, name: "condition" },
   ];
 
-  const onclick = () => {};
-
   return (
     <div className="JudgeContainer">
       <div className="Judge">
-        <select name="problem" onChange={onChangeProblem}>
-          {problem.map((p) => (
-            <option key={p.id} value={p.id}>
-              {p.name}
-            </option>
-          ))}
-        </select>
-        <input type="file" id="file" onChange={onChangeFile}></input>
-        <input type="button" value="제출"></input>
+        <p className="header">
+          <select className="problem" onChange={onChangeProblem}>
+            {problem.map((p) => (
+              <option key={p.id} value={p.id}>
+                {p.name}
+              </option>
+            ))}
+          </select>
+        </p>
+        <p className="footer">
+          <input
+            className="file"
+            type="file"
+            id="file"
+            accept=".cpp"
+            onChange={onChangeFile}
+          />
+        </p>
+        <div className="button">submit</div>
       </div>
     </div>
   );
