@@ -34,11 +34,11 @@
     }
     &:hover {
       span:not(.Arrow) {
-        color: hotpink;
+        color: rgb(73, 115, 255);
       }
     }
     &.active {
-      color: red;
+      color: blue;
     }
   }
 
@@ -54,7 +54,7 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
   .LeftSide {
     font-size: 10px !important;
   }

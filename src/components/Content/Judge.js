@@ -1,8 +1,11 @@
 import React, { useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "../../scss/Content/Judge.scss";
 
 function Judge() {
+  const navigate = useNavigate();
+
   const [file, setFile] = useState();
 
   const [problemNum, setProblemNum] = useState(0);
@@ -10,7 +13,9 @@ function Judge() {
 
   const onChangeFile = useCallback(
     (e) => {
-      setFile(e.target.files[0]);
+      const formData = new FormData();
+      formData.append("file", e.target.files[0]);
+      setFile(formData);
     },
     [file]
   );
@@ -23,6 +28,12 @@ function Judge() {
     [problemNum]
   );
 
+  const onClick = () => {
+    console.log(file);
+    // axios를 통한 파일 전송
+    navigate("/main");
+  };
+
   const problem = [
     { id: 0, name: "dish" },
     { id: 1, name: "block" },
@@ -32,7 +43,10 @@ function Judge() {
   return (
     <div className="JudgeContainer">
       <div className="Judge">
-        <p className="header">
+        <div className="title">
+          <div className="emoji">🔴🟠🟢</div>
+        </div>
+        <div className="header">
           <select className="problem" onChange={onChangeProblem}>
             {problem.map((p) => (
               <option key={p.id} value={p.id}>
@@ -40,8 +54,8 @@ function Judge() {
               </option>
             ))}
           </select>
-        </p>
-        <p className="footer">
+        </div>
+        <div className="footer">
           <input
             className="file"
             type="file"
@@ -49,8 +63,10 @@ function Judge() {
             accept=".cpp"
             onChange={onChangeFile}
           />
-        </p>
-        <div className="button">submit</div>
+        </div>
+        <div className="button" onClick={onClick}>
+          submit
+        </div>
       </div>
     </div>
   );
